@@ -1,0 +1,18 @@
+<html lang="en" ng-app="twitterTrends">
+  <head>
+    <title>Twitter Trends</title>
+    <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="css\index.css" rel="stylesheet" type="text/css" />
+    <script src="app\angular.min.js"></script>
+    <script src="mainApp.js"></script>
+  </head>
+  <body>
+    <div ng-controller="twitterTrendsController">
+      <div ng-repeat = "tweet in data">
+        <div ng-repeat = "tweetdata in tweet.trends">
+          {{tweetdata.name}} - {{tweetdata.tweet_volume || 'Not Available'}}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
