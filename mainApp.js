@@ -12,7 +12,6 @@ twitterTrends.controller('twitterTrendsController',['$scope',function($scope){
         // // do something with myJson
         fetch("https://api.twitter.com/1.1/trends/place.json?id=1", {
         method: "GET",
-        mode: 'no-cors',
         headers: {
             "Authorization":'AAAAAAAAAAAAAAAAAAAAAFN6UgEAAAAAKCWEYyaKXipOyTqlktobll7pLO8%3DVp0PiDQALdtK18OEKxM4vDI2O4fQppfQGIfNaVxcVdjiTzcj9p',
         },
