@@ -20,5 +20,17 @@ twitterTrends.controller('twitterTrendsController',['$scope',function($scope){
         }).catch(function(error) {
             console.log('Looks like there was a problem: \n', error);
         });
+
+    //     var x = new XMLHttpRequest();
+    //     x.open('GET', "https://cors-anywhere.herokuapp.com//api.twitter.com/1.1/trends/place.json?id=1");
+    //     x.onload = x.onerror = function() {
+    //     printResult(
+    //         options.method + ' ' + options.url + '\n' +
+    //         x.status + ' ' + x.statusText + '\n\n' +
+    //         (x.responseText || '')
+    //   );
+
+    //   console.log(x);
+    // };
       }
 }]);
