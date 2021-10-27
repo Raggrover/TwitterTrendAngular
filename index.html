@@ -3,11 +3,22 @@
     <title>Twitter Trends</title>
     <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
     <link href="css\index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     <script src="app\angular.min.js"></script>
     <script src="mainApp.js"></script>
   </head>
   <body>
     <div ng-controller="twitterTrendsController">
+      <div><h1><center>Twitter Trends</center></h1></div>
+      <select class="form-control" style="width: 50%;" ng-click="getTweets()">
+        <option value="" selected disabled>Select a location</option>
+        <option value="1">WorldWide</option>
+        <option value="23424848">India</option>
+        <option value="23424977">United States of America</option>
+        <option value="23424975">United Kingdom</option>
+        <option value="23424948">Singapore</option>
+        <option value="23424856">Japan</option>
+      </select>
       <div ng-repeat = "tweet in data">
         <div ng-repeat = "tweetdata in tweet.trends">
           {{tweetdata.name}} - {{tweetdata.tweet_volume || 'Not Available'}}
